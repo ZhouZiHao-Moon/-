@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>第七课</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 32px;
+  color: #000;
+}
+
+h2 {
+  font-size: 28px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 10px;
+}
+
+h6 {
+  color: #777;
+  font-size: 18px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 22px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 22px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>极客共进交流会&amp;云平台联合活动</h1>
+<h1>Python教学第七课——爬虫初步</h1>
+<h2>主讲：周子皓</h2>
+<p>爬虫是Python的一大应用，本节课我们将学习使用requests库和正则表达式获取校园网内的新闻。</p>
+<h2>requests库的安装</h2>
+<pre><code>pip install requests
+</code></pre>
+
+<h2>get请求</h2>
+<p>我们使用get()方法构建一个get请求，方法如下：</p>
+<pre><code>import requests
+
+response = requests.get('http://www.ntzx.cn/Category_10/Index.aspx')
+print(response)
+</code></pre>
+
+<p>打印的结果是状态码，我们再来尝试一下获取HTML：</p>
+<pre><code>print(response.text)
+</code></pre>
+
+<p>打印的结果和在浏览器里用F12看到的结果应该是一致的。到这里我们就已经获取到了网页的HTML，下面需要提取出我们需要的元素。</p>
+<h3>补充：User-Agent</h3>
+<p>User-Agent是浏览器标识信息，它被包含在headers里，如果不加以额外设置，一些网站可能会禁止抓取，设置方法如下：</p>
+<pre><code>headers = {
+'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36'
+}
+response = requests.get('http://www.ntzx.cn/Category_10/Index.aspx',headers=headers)
+</code></pre>
+
+<p>可以在F12里查看请求的User-Agent然后把它复制过来就行了。</p>
+<h2>正则表达式</h2>
+<p>正则表达式匹配就是用一定的规则将特定的文本提取出来。比如，电子邮件开头是一段字符串，然后是一个@符号，最后是某个域名，这是有特定的组成格式的。另外，对于URL，开头是协议类型，然后是冒号加双斜线，最后是域名加路径。</p>
+<p>其实正则表达式不是Python独有的，它也可以用在其他编程语言中。但是Python的re库提供了整个正则表达式的实现，利用这个库，可以在Python中使用正则表达式。在Python中写正则表达式几乎都用这个库，下面就来了解它的一些常用方法。</p>
+<h3>match()</h3>
+<p>match()可以检测这个正则表达式是否匹配字符串，它会尝试从字符串的起始位置匹配正则表达式，如果匹配，就返回匹配成功的结果；如果不匹配，就返回None。使用方法：</p>
+<pre><code>import re
+
+re.match(正则表达式,匹配的文本)
+</code></pre>
+
+<p>示例：</p>
+<pre><code>import re
+
+content = 'Hello 123 4567 World_This is a Regex Demo'
+print(len(content))
+result = re.match('^Hello\s\d\d\d\s\d{4}\s\w{10}', content)
+print(result)
+print(result.group())
+print(result.span())
+</code></pre>
+
+<p>运行结果：</p>
+<pre><code>41
+&lt;_sre.SRE_Match object; span=(0, 25), match='Hello 123 4567 World_This'&gt;
+Hello 123 4567 World_This
+(0, 25)
+</code></pre>
+
+<p>对正则表达式<code>^Hello\s\d\d\d\s\d{4}\s\w{10}</code>的讲解：开头的^是匹配字符串的开头，也就是以Hello开头；然后\s匹配空白字符，用来匹配目标字符串的空格；\d匹配数字，3个\d匹配123；然后再写1个\s匹配空格；后面还有4567，我们其实可以依然用4个\d来匹配，但是这么写比较烦琐，所以后面可以跟{4}以代表匹配前面的规则4次，也就是匹配4个数字；然后后面再紧接1个空白字符，最后\w{10}匹配10个字母及下划线。我们注意到，这里其实并没有把目标字符串匹配完，不过这样依然可以进行匹配，只不过匹配结果短一点而已。</p>
+<p>而在match()方法中，第一个参数传入了正则表达式，第二个参数传入了要匹配的字符串。</p>
+<p>打印输出结果，可以看到结果是<code>SRE_Match</code>对象，这证明成功匹配。该对象有两个方法：group()方法可以输出匹配到的内容，结果是<code>Hello 123 4567 World_This</code>，这恰好是正则表达式规则所匹配的内容；span()方法可以输出匹配的范围，结果是(0, 25)，这就是匹配到的结果字符串在原字符串中的位置范围。</p>
+<p>通过上面的例子，我们基本了解了如何在Python中使用正则表达式来匹配一段文字。</p>
+<h3>匹配目标</h3>
+<p>我们可以使用()将想提取的子字符串括起来，()实际上标记了一个子表达式的开始和结束位置，被标记的每个子表达式会依次对应每一个分组，调用group()方法传入分组的索引即可获取提取的结果。示例如下：</p>
+<pre><code>import re
+
+content = 'Hello 1234567 World_This is a Regex Demo'
+result = re.match('^Hello\s(\d+)\sWorld', content)
+print(result)
+print(result.group())
+print(result.group(1))
+print(result.span())
+</code></pre>
+
+<p>这里我们想把字符串中的1234567提取出来，此时可以将数字部分的正则表达式用()括起来，然后调用了group(1)获取匹配结果。运行结果如下：</p>
+<pre><code>&lt;_sre.SRE_Match object; span=(0, 19), match='Hello 1234567 World'&gt;
+Hello 1234567 World
+1234567
+(0, 19)
+</code></pre>
+
+<p>可以看到，我们成功得到了1234567。这里用的是group(1)，它与group()有所不同，后者会输出完整的匹配结果，而前者会输出第一个被()包围的匹配结果。假如正则表达式后面还有()包括的内容，那么可以依次用group(2)、group(3)等来获取。</p>
+<h3>通用匹配</h3>
+<p>刚才我们写的正则表达式其实比较复杂，出现空白字符我们就写\s匹配，出现数字我们就用\d匹配，这样的工作量非常大。其实完全没必要这么做，因为还有一个万能匹配可以用，那就是<code>.*</code>（点星）。其中<code>.</code>（点）可以匹配任意字符（除换行符），<code>*</code>（星）代表匹配前面的字符无限次，所以它们组合在一起就可以匹配任意字符了。有了它，我们就不用挨个字符地匹配了。</p>
+<h3>贪婪与非贪婪</h3>
+<p>使用上面的通用匹配.*时，可能有时候匹配到的并不是我们想要的结果。看下面的例子：</p>
+<pre><code>import re
+
+content = 'Hello 1234567 World_This is a Regex Demo'
+result = re.match('^He.*(\d+).*Demo$', content)
+print(result)
+print(result.group(1))
+</code></pre>
+
+<p>这里我们依然想获取中间的数字，所以中间依然写的是(\d+)。而数字两侧由于内容比较杂乱，所以想省略来写，都写成 .<em>。最后，组成^He.</em>(\d+).*Demo$，看样子并没有什么问题。我们看下运行结果：</p>
+<pre><code>&lt;_sre.SRE_Match object; span=(0, 40), match='Hello 1234567 World_This is a Regex Demo'&gt;
+7
+</code></pre>
+
+<p>奇怪的事情发生了，我们只得到了7这个数字，这是怎么回事呢？</p>
+<p>这里就涉及一个贪婪匹配与非贪婪匹配的问题了。在贪婪匹配下，<code>.*</code>会匹配尽可能多的字符。正则表达式中<code>.*</code>后面是\d+，也就是至少一个数字，并没有指定具体多少个数字，因此，<code>.*</code>就尽可能匹配多的字符，这里就把123456匹配了，给\d+留下一个可满足条件的数字7，最后得到的内容就只有数字7了。</p>
+<p>但这很明显会给我们带来很大的不便。有时候，匹配结果会莫名其妙少了一部分内容。其实，这里只需要使用非贪婪匹配就好了。非贪婪匹配的写法是<code>.*?</code>，多了一个?，那么它可以达到怎样的效果？我们再用实例看一下：</p>
+<pre><code>import re
+
+content = 'Hello 1234567 World_This is a Regex Demo'
+result = re.match('^He.*?(\d+).*Demo$', content)
+print(result)
+print(result.group(1))
+</code></pre>
+
+<p>结果如下：</p>
+<pre><code>&lt;_sre.SRE_Match object; span=(0, 40), match='Hello 1234567 World_This is a Regex Demo'&gt;
+1234567
+</code></pre>
+
+<p>此时就可以成功获取1234567了。原因可想而知，贪婪匹配是尽可能匹配多的字符，非贪婪匹配就是尽可能匹配少的字符。当<code>.*?</code>匹配到Hello后面的空白字符时，再往后的字符就是数字了，而\d+恰好可以匹配，那么这里<code>.*?</code>就不再进行匹配，交给\d+去匹配后面的数字。所以这样<code>.*?</code>匹配了尽可能少的字符，\d+的结果就是1234567了。</p>
+<p>所以说，在做匹配的时候，字符串中间尽量使用非贪婪匹配，也就是用<code>.*?</code>来代替<code>.*</code>，以免出现匹配结果缺失的情况。</p>
+<p>但这里需要注意，如果匹配的结果在字符串结尾，<code>.*?</code>就有可能匹配不到任何内容了，因为它会匹配尽可能少的字符。</p>
+<h3>search()</h3>
+<p>match()方法是从字符串的开头开始匹配的，一旦开头不匹配，那么整个匹配就失败了。</p>
+<p>这里就有另外一个方法search()，它在匹配时会扫描整个字符串，然后返回第一个成功匹配的结果。也就是说，正则表达式可以是字符串的一部分，在匹配时，search()方法会依次扫描字符串，直到找到第一个符合规则的字符串，然后返回匹配内容，如果搜索完了还没有找到，就返回None。</p>
+<p>因此，为了匹配方便，我们可以尽量使用search()方法。</p>
+<h3>findall()</h3>
+<p>findall()方法会搜索整个字符串，然后返回匹配正则表达式的所有内容。如果有返回结果的话，就是列表类型，所以需要遍历一下来依次获取每组内容。返回的列表中的每个元素都是元组类型，我们用对应的索引依次取出即可。</p>
+<h2>练习：爬取校园网新闻</h2>
+<p>大致了解了上面内容后，我们就可以爬取校园网新闻了。</p>
+<p>首先，我们要获取到校园网的html源码，这需要使用requests的get()方法。</p>
+<p>然后，在浏览器打开校园网新闻，按F12查看源码，查看包含新闻信息的节点内容。</p>
+<p>我们需要获取新闻和时间，每一个新闻都在一个tr节点中，标题在第二个td节点中的a节点，日期第三个td节点中。</p>
+<p>我们可以写出这样一个正则表达式：</p>
+<pre><code>&lt;tr&gt;&lt;td&gt;.*?&lt;/td&gt;&lt;td&gt;&lt;a .*?&gt;(.*?)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;(.*?)&lt;/td&gt;&lt;/tr&gt;
+</code></pre>
+
+<p>然后遍历结果并打印出来即可。</p>
+<p>思考：有些红色标题的新闻有<code>&lt;font&gt;</code>标签，想想怎么去掉标签内的内容。</p>
+<h2>其他</h2>
+<p>本节课的爬虫是最基本最简单的，现在能用这种方法爬取的信息很少，还得感谢学校的原始网站/滑稽。如果想进一步学习，可以在参考来源学习：</p>
+<p>参考来源：https://cuiqingcai.com/5052.html</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

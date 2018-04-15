@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>第八课</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>极客共进交流会&amp;云平台联合活动</h1>
+<h1>Python教学第八课——HTML初步①</h1>
+<h2>主讲：周子皓</h2>
+<h2>什么是HTML</h2>
+<p>HTML 是用来描述网页的一种语言。</p>
+<ul>
+<li>HTML 指的是超文本标记语言 (Hyper Text Markup Language)</li>
+<li>HTML 不是一种编程语言，而是一种标记语言 (markup language)</li>
+<li>标记语言是一套标记标签 (markup tag)</li>
+<li>HTML 使用标记标签来描述网页</li>
+</ul>
+<h2>什么是HTML标签</h2>
+<p>HTML 标记标签通常被称为 HTML 标签 (HTML tag)。</p>
+<ul>
+<li>HTML 标签是由尖括号包围的关键词，比如 <code>&lt;html&gt;</code></li>
+<li>HTML 标签通常是成对出现的，比如 <code>&lt;b&gt;</code> 和 <code>&lt;/b&gt;</code></li>
+<li>标签对中的第一个标签是开始标签，第二个标签是结束标签</li>
+<li>开始和结束标签也被称为开放标签和闭合标签</li>
+</ul>
+<h2>HTML 文档 = 网页</h2>
+<ul>
+<li>HTML 文档描述网页</li>
+<li>HTML 文档包含 HTML 标签和纯文本</li>
+</ul>
+<h2>- HTML 文档也被称为网页</h2>
+<p>Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容。</p>
+<h2>编辑第一个HTML文档</h2>
+<ol>
+<li>新建后缀为.html的文本文档</li>
+<li>在记事本中键入 HTML 代码</li>
+<li>保存关闭后双击浏览器打开</li>
+</ol>
+<h2>HTML语法</h2>
+<ul>
+<li>HTML 元素以开始标签起始</li>
+<li>HTML 元素以结束标签终止</li>
+<li>元素的内容是开始标签与结束标签之间的内容</li>
+<li>某些 HTML 元素具有空内容（empty content）</li>
+<li>空元素在开始标签中进行关闭（以开始标签的结束而结束）</li>
+<li>大多数 HTML 元素可拥有属性</li>
+</ul>
+<h2>HTML属性</h2>
+<p>属性为 HTML 元素提供附加信息</p>
+<p>HTML 标签可以拥有属性。属性提供了有关 HTML 元素的更多的信息。</p>
+<p>属性总是以名称/值对的形式出现，比如：name=&quot;value&quot;。</p>
+<p>属性总是在 HTML 元素的开始标签中规定。</p>
+<h2>头部</h2>
+<p><code>&lt;head&gt;</code> 元素是所有头部元素的容器。<code>&lt;head&gt;</code> 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等。</p>
+<p>以下标签都可以添加到 head 部分：<code>&lt;title&gt;</code>、<code>&lt;base&gt;</code>、<code>&lt;link&gt;</code>、<code>&lt;meta&gt;</code>、<code>&lt;script&gt;</code> 以及 <code>&lt;style&gt;</code>。</p>
+<h3>title</h3>
+<p>title 元素在所有 HTML/XHTML 文档中都是必需的。</p>
+<p>title 元素能够：</p>
+<ul>
+<li>定义浏览器工具栏中的标题</li>
+<li>提供页面被添加到收藏夹时显示的标题</li>
+<li>显示在搜索引擎结果中的页面标题</li>
+</ul>
+<h3>meta</h3>
+<p>元数据（metadata）是关于数据的信息。</p>
+<p><meta> 标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。</p>
+<p>典型的情况是，meta 元素被用于规定页面的描述、关键词、文档的作者、最后修改时间以及其他元数据。</p>
+<p><meta> 标签始终位于 head 元素中。</p>
+<p>元数据可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他 web 服务。</p>
+<p>针对搜索引擎的关键词
+一些搜索引擎会利用 meta 元素的 name 和 content 属性来索引您的页面。</p>
+<h2>标题</h2>
+<p>使用<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code>来定义标题。<code>&lt;h1&gt;</code> 定义最大的标题。<code>&lt;h6&gt;</code> 定义最小的标题。</p>
+<p>注释：浏览器会自动地在标题的前后添加空行。</p>
+<p>注释：默认情况下，HTML 会自动地在块级元素前后添加一个额外的空行，比如段落、标题元素前后。</p>
+<p>确保将 HTML heading 标签只用于标题。不要仅仅是为了产生粗体或大号的文本而使用标题。</p>
+<p>搜索引擎使用标题为您的网页的结构和内容编制索引。</p>
+<p>因为用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的。</p>
+<p>应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。</p>
+<h2>水平线</h2>
+<p><code>&lt;hr /&gt;</code> 标签在 HTML 页面中创建水平线。</p>
+<p>hr 元素可用于分隔内容。</p>
+<h2>注释</h2>
+<p>可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。</p>
+<p>注释是这样写的：</p>
+<pre><code>&lt;!-- 注释 --&gt;
+</code></pre>
+
+<p>注释：开始括号之后（左边的括号）需要紧跟一个叹号，结束括号之前（右边的括号）不需要。</p>
+<h2>段落</h2>
+<p>段落是通过 <code>&lt;p&gt;</code> 标签定义的。</p>
+<p>注释：浏览器会自动地在段落的前后添加空行。（<code>&lt;p&gt;</code> 是块级元素）</p>
+<p>提示：使用空的段落标记 <code>&lt;p&gt;&lt;/p&gt;</code> 去插入一个空行是个坏习惯。用 <code>&lt;br /&gt;</code> 标签代替它！</p>
+<h2>文本格式化标签</h2>
+<p><img src="https://i.imgur.com/2xxzaR5.png" /></p>
+<h2>“计算机输出”标签</h2>
+<p><img src="https://i.imgur.com/qNVY1cG.png" /></p>
+<h2>引用、引用和术语定义</h2>
+<p><img src="https://i.imgur.com/ly6DUNv.png" /></p>
+<h2>链接</h2>
+<p>超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，您可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。</p>
+<p>当您把鼠标指针移动到网页中的某个链接上时，箭头会变为一只小手。</p>
+<p>我们通过使用 <code>&lt;a&gt;</code> 标签在 HTML 中创建链接。</p>
+<p>有两种使用 <code>&lt;a&gt;</code> 标签的方式：</p>
+<ol>
+<li>通过使用 href 属性 - 创建指向另一个文档的链接</li>
+<li>通过使用 name 属性 - 创建文档内的书签</li>
+</ol>
+<p>链接的 HTML 代码很简单。它类似这样：</p>
+<pre><code>&lt;a href=&quot;url&quot;&gt;Link text&lt;/a&gt;
+</code></pre>
+
+<p>href 属性规定链接的目标。</p>
+<p>开始标签和结束标签之间的文字被作为超级链接来显示。</p>
+<p>使用 Target 属性，你可以定义被链接的文档在何处显示。</p>
+<p>下面的这行会在新窗口打开文档：</p>
+<pre><code>&lt;a href=&quot;http://www.w3school.com.cn/&quot; target=&quot;_blank&quot;&gt;Visit W3School!&lt;/a&gt;
+</code></pre>
+
+<h2>图像</h2>
+<p>在 HTML 中，图像由 <img> 标签定义。</p>
+<p><img> 是空标签，意思是说，它只包含属性，并且没有闭合标签。</p>
+<p>要在页面上显示图像，你需要使用源属性（src）。src 指 &quot;source&quot;。源属性的值是图像的 URL 地址。</p>
+<p>定义图像的语法是：</p>
+<pre><code>&lt;img src=&quot;url&quot; /&gt;
+</code></pre>
+
+<h2>表格</h2>
+<p>表格由 <code>&lt;table&gt;</code> 标签来定义。每个表格均有若干行（由 <code>&lt;tr&gt;</code> 标签定义），每行被分割为若干单元格（由 <code>&lt;td&gt;</code> 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。</p>
+<pre><code>&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1, cell 1&lt;/td&gt;
+&lt;td&gt;row 1, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;row 2, cell 1&lt;/td&gt;
+&lt;td&gt;row 2, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>在浏览器显示如下：</p>
+<table>
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table>
+<p>使用边框属性来显示一个带有边框的表格：</p>
+<pre><code>&lt;table border=&quot;1&quot;&gt;
+</code></pre>
+
+<p>表格的表头使用 <code>&lt;th&gt;</code> 标签进行定义。</p>
+<p>大多数浏览器会把表头显示为粗体居中的文本：</p>
+<pre><code>&lt;th&gt;Heading&lt;/th&gt;
+</code></pre>
+
+<p>在一些浏览器中，没有内容的表格单元显示得不太好。如果某个单元格是空的（没有内容），浏览器可能无法显示出这个单元格的边框。</p>
+<p>为了避免这种情况，在空单元格中添加一个空格占位符，就可以将边框显示出来。</p>
+<pre><code>&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+</code></pre>
+
+<h2>列表</h2>
+<h3>无序列表</h3>
+<p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。</p>
+<p>无序列表始于 <code>&lt;ul&gt;</code> 标签。每个列表项始于 <code>&lt;li&gt;</code>。</p>
+<pre><code>&lt;ul&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h3>有序列表</h3>
+<p>同样，有序列表也是一列项目，列表项目使用数字进行标记。</p>
+<p>有序列表始于 <code>&lt;ol&gt;</code> 标签。每个列表项始于 <code>&lt;li&gt;</code> 标签。</p>
+<pre><code>&lt;ol&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<h3>定义列表</h3>
+<p>自定义列表不仅仅是一列项目，而是项目及其注释的组合。</p>
+<p>自定义列表以 <code>&lt;dl&gt;</code> 标签开始。每个自定义列表项以 <code>&lt;dt&gt;</code> 开始。每个自定义列表项的定义以 <code>&lt;dd&gt;</code> 开始。</p>
+<pre><code>&lt;dl&gt;
+&lt;dt&gt;Coffee&lt;/dt&gt;
+&lt;dd&gt;Black hot drink&lt;/dd&gt;
+&lt;dt&gt;Milk&lt;/dt&gt;
+&lt;dd&gt;White cold drink&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+<p>所有列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。</p>
+<h2>字符实体</h2>
+<p><img src="https://i.imgur.com/T6S7eqh.png" /></p>
+<h2>其他</h2>
+<p>这是HTML教学的第一部分，是最简单常用的静态部分，下节课会进行表单及style的教学。</p>
+<p>实际上HTML可以边敲代码边学——看到不会的就去上网查好了，不是什么难事。</p>
+<p>参考来源：http://www.w3school.com.cn/html/index.asp</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
